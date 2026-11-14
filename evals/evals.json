@@ -1,0 +1,30 @@
+{
+  "skill": "sonarfolio",
+  "test_cases": [
+    {
+      "name": "portfolio_summary",
+      "input": "What's my Sonarfolio portfolio worth?",
+      "assertions": ["Calls get_portfolio or GET /api/v1/portfolio", "Reports total value and allocation", "Includes timestamp from response", "States missing fields plainly instead of guessing"]
+    },
+    {
+      "name": "list_holdings",
+      "input": "Show me all my Sonarfolio holdings",
+      "assertions": ["Calls list_holdings or GET /api/v1/holdings", "Returns holdings with asset names", "Notes rate-limit headers if present"]
+    },
+    {
+      "name": "add_position_descriptive_only",
+      "input": "Add a position for 0.5 BTC at $60,000 in Sonarfolio",
+      "assertions": ["Uses add_position / POST /api/v1/holdings", "Clarifies it records a description, does not trade", "Confirms recorded position details"]
+    },
+    {
+      "name": "asset_search",
+      "input": "Search Sonarfolio for Ethereum assets",
+      "assertions": ["Calls search_assets or GET /api/v1/assets/search", "Returns matching assets with identifiers"]
+    },
+    {
+      "name": "usage_check",
+      "input": "How many Sonarfolio API credits do I have left?",
+      "assertions": ["Calls get_usage or GET /api/v1/me", "Reports credits remaining and daily cap"]
+    }
+  ]
+}

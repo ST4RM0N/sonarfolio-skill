@@ -1,0 +1,25 @@
+{
+  "skill": "sonarfolio",
+  "test_cases": [
+    {
+      "input": "sonarfolio my portfolio",
+      "should_trigger": true
+    },
+    {
+      "input": "what are my holdings in Sonar?",
+      "should_trigger": true
+    },
+    {
+      "input": "add a BTC position to my portfolio tracker",
+      "should_trigger": true
+    },
+    {
+      "input": "check my LunarCrush Galaxy Score for BTC",
+      "should_trigger": false
+    },
+    {
+      "input": "what's the weather today",
+      "should_trigger": false
+    }
+  ]
+}
